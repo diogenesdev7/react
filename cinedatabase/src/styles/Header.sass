@@ -1,0 +1,107 @@
+@import './variables'
+    
+header 
+    background-color: #222
+    height: 90px
+    
+    nav
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+        position: relative
+
+    .logo
+        display: flex
+        gap: 10px
+        align-items: center
+
+        svg
+            font-size: 2.7rem
+            color: color-mix(in srgb, $red, white 30%)
+
+        h1
+            font-size: max(1.7rem, 2.5vw)
+            font-family: 'Kalam'
+
+
+    .menu-mobile,
+    .menu-desktop
+        display: flex
+        gap: 5vw
+        height: 100%
+
+        li
+            position: relative
+
+            a
+                display: flex
+                align-items: center
+                height: 100%
+                transition: ease .3s
+                font-size: 1.3rem
+                padding: 1.5vw
+            
+            a:hover
+                color: $yellow
+
+            ul
+                position: absolute
+                background-color: $black
+                width: 100%
+                border-radius: 0 0 10px 10px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                display: none
+                z-index: 2
+
+                li
+                    width: 100%
+
+                    a
+                        width: 100%
+                        display: flex
+                        justify-content: center
+
+                    a:hover
+                        background-color: $blue
+
+        li:hover > ul
+            display: flex    
+
+
+
+    .hamburguer
+        display: none
+
+    .menu-mobile
+        display: none
+
+
+
+
+    @media screen and (max-width: 890px)
+        .hamburguer
+            display: block
+
+        .menu-desktop
+            display: none
+        
+        .menu-mobile
+            display: flex
+            flex-direction: column
+            gap: 15px
+            align-items: center
+            position: absolute
+            top: 90px
+            left: 0
+            width: 100%
+            height: 100vh
+            background-color: $blue
+
+        .categorias
+            li
+                a
+                    font-size: 1rem
