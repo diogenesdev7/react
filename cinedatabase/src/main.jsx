@@ -7,7 +7,7 @@ import './index.css'
 import './styles/index.sass'
 import Populares from './pages/Populares.jsx'
 import Movie from './pages/Movie.jsx'
-import Top20 from './pages/top20.jsx'
+import Topvinte from './pages/Topvinte.jsx'
 import Acao from './pages/Acao.jsx'
 import Comedy from './pages/Comedy.jsx'
 import Drama from './pages/Drama.jsx'
@@ -22,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route element={<App />} >
           <Route path='/' element={<Home />} />
           <Route path='/populares' element={<Populares />} />
-          <Route path='/top20' element={<Top20 />} />
+          <Route path='/topvinte' element={<Topvinte />} />
           <Route path='/acao' element={<Acao />} />
           <Route path='/comedia' element={<Comedy />} />
           <Route path='/drama' element={<Drama />} />
